@@ -1,0 +1,14 @@
+TC01:
+  product_name: phone
+
+delivery_info:
+  name: yodsaphon
+  surname: keddid
+  address: 44/44 Village No. 4, Fa Ham Subdistrict, Mae Hong Son District, Samut Sakhon Province
+  phone_number: 0843488574
+
+payment_details:
+  card_number:  "4111111111111111"
+  expiration_date:  12/2028
+  cv_code:  "343"
+  card_owner: abcdefghijklmnopqrstu
