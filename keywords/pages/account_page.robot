@@ -2,45 +2,29 @@
 Resource    ../imports.robot
 
 *** Keywords ***
-Click sign up button
+Click Sign Up Button
     SeleniumLibrary.Click Element       ${account_locator.sign_up_button}
 
-Click icon account
-    SeleniumLibrary.Click Element       ${account_locator.icon_account}
-
-The order should be createds
+The Order Should Be Createds
     SeleniumLibrary.Click Element       ${account_locator.btn_order}
 
-Click icon cart
-    SeleniumLibrary.Click Element       ${account_locator.btn_cart}
+Input Username Text Box
+    [Arguments]    ${gmail}
+    SeleniumLibrary.Input Text          ${account_locator.username}           ${gmail}
 
-Input username text_box
-    SeleniumLibrary.Input Text          ${account_locator.username}           Jun0071@gmail.com
+Input Password Text Box
+    [Arguments]    ${password}
+    SeleniumLibrary.Input Text          ${account_locator.password}           ${password}
 
-Input password text box
-    SeleniumLibrary.Input Text          ${account_locator.password}           Jin@2345678
+Input Confirm Password Text Box
+    [Arguments]    ${confirmPassword}
+    SeleniumLibrary.Input Text          ${account_locator.confirmPassword}    ${confirmPassword}
 
-Input confirm password text box
-    SeleniumLibrary.Input Text          ${account_locator.confirmPassword}    Jin@2345678
-
-Input name text box
-    SeleniumLibrary.Input Text          ${account_locator.item_name}    ${delivery_info.name}
-
-Input surname text box
-    SeleniumLibrary.Input Text          ${account_locator.surName}    ${delivery_info.surname}
-
-Input address text box
-    SeleniumLibrary.Input Text          ${account_locator.address}    ${delivery_info.address}
-
-Input phone number text box
-    SeleniumLibrary.Input Text          ${account_locator.phone_number}    ${delivery_info.phone_number}
-
-Click OK button
+Click OK Button
     common.Click Button    OK
 
-Click PAY button
+Click PAY Button
     common.Click Button    PAY       
 
-Click Next button
+Click Next Button
     common.Click Button    Next
-       

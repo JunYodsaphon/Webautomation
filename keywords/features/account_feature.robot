@@ -5,7 +5,7 @@ Resource    ../imports.robot
 Register new account
     account_page.Click icon account
     account_page.Click sign up button
-    account_page.Input username text box
+    account_page.Input username text box    
     account_page.Input password text box
     account_page.Input confirm password text box
     account_page.Click sign up button
@@ -17,7 +17,7 @@ Fill Delivery info field
     account_page.Click icon cart
     BuiltIn.Sleep    3s
     account_page.Input name text box
-    account_page.Input surname text box
+    account_page.Input usrname text box
     account_page.Input address text box
     account_page.Input phone number text box
     account_page.Click PAY button

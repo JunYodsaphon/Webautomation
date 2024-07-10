@@ -1,5 +1,10 @@
-TC01:
+product_web:
   product_name: phone
+
+user_account:
+  gmail:  Jun0099@gmail.com
+  password: Jin@2345678
+  confirm_password: Jin@2345678
 
 delivery_info:
   name: yodsaphon
