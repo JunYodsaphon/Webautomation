@@ -8,7 +8,3 @@ Clear all browser
 Enter website https://training-platform.doppio-tech.com
     SeleniumLibrary.Open Browser        ${url}         browser=chrome
     SeleniumLibrary.Maximize Browser Window
-    BuiltIn.Sleep      2s
-
-
-

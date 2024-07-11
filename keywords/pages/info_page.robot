@@ -2,30 +2,42 @@
 Resource    ../imports.robot
 
 *** Keywords ***
+Verify Name Text Box
+    SeleniumLibrary.Wait Until Element Is Visible    ${info_locator.ture_name}
+
 Input Name Text Box
-    [Arguments]    ${delivery_info.name}
-    SeleniumLibrary.Wait Until Element Is Visible    ${info_locator.item_name}    
-    SeleniumLibrary.Input Text          ${info_locator.item_name}    ${delivery_info.name}
+    [Arguments]    ${full_name}=yodsaphon
+    SeleniumLibrary.Input Text    ${info_locator.ture_name}    ${full_name}
+
+Verify Surname Text Box
+    SeleniumLibrary.Wait Until Element Is Visible    ${info_locator.surName}
 
 Input Surname Text Box
-    [Arguments]    ${delivery_info.surname}
-    SeleniumLibrary.Wait Until Element Is Visible    ${info_locator.surName}
-    SeleniumLibrary.Input Text          ${info_locator.surName}    ${delivery_info.surname}
+    [Arguments]    ${surname}
+    SeleniumLibrary.Input Text    ${info_locator.surName}    ${surname}
+
+Verify Address Text Box
+    SeleniumLibrary.Wait Until Element Is Visible    ${info_locator.address}
 
 Input Address Text Box
-    [Arguments]    ${delivery_info.address}
-    SeleniumLibrary.Wait Until Element Is Visible    ${info_locator.address}
-    SeleniumLibrary.Input Text          ${info_locator.address}    ${delivery_info.address}
+    [Arguments]    ${address}
+    SeleniumLibrary.Input Text    ${info_locator.address}    ${address}
+
+Verify Phone Number Text Box
+    SeleniumLibrary.Wait Until Element Is Visible    ${info_locator.phone_number}
 
 Input Phone Number Text Box
-    [Arguments]    ${delivery_info.phone_number}
-    SeleniumLibrary.Wait Until Element Is Visible    ${info_locator.phone_number}
-    SeleniumLibrary.Input Text          ${info_locator.phone_number}    ${delivery_info.phone_number}
+    [Arguments]    ${phone_number}
+    SeleniumLibrary.Input Text          ${info_locator.phone_number}    ${phone_number}
+
+Verify PAY Button
+    SeleniumLibrary.Wait Until Element Is Visible    ${info_locator.PAY_button}
 
 Click PAY Button
-    SeleniumLibrary.Wait Until Element Is Visible    ${info_locator.PAY_button}
     SeleniumLibrary.Click Element       ${info_locator.PAY_button}
 
-Click Next Button
+Verify Next Button
     SeleniumLibrary.Wait Until Element Is Visible    ${info_locator.Next_button}
+
+Click Next Button
     SeleniumLibrary.Click Element       ${info_locator.Next_button}

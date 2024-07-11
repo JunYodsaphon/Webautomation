@@ -1,5 +1,5 @@
 *** Variables ***
-${info_locator.item_name}    xpath=//input[@id="form_item_name"]
+${info_locator.ture_name}    //*[@id="form_item_name"]
 
 ${info_locator.surName}    xpath=//input[@id="form_item_surName"]
 

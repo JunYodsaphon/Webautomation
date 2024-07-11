@@ -10,5 +10,4 @@ ${account_locator.confirm_password}    xpath=//input[@id="basic_confirmPassword"
 
 ${account_locator.OK_button}    xpath=//button[span[text()="OK"]]
 
-
 ${account_locator.btn_order}    xpath=//*[@id="app"]/section/div/div[3]/div[2]/div/div/div/div/div/div/table/tbody/tr/td[2]
