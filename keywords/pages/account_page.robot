@@ -3,28 +3,28 @@ Resource    ../imports.robot
 
 *** Keywords ***
 Click Sign Up Button
+    SeleniumLibrary.Wait Until Element Is Visible    ${account_locator.sign_up_button}    
     SeleniumLibrary.Click Element       ${account_locator.sign_up_button}
 
-The Order Should Be Createds
-    SeleniumLibrary.Click Element       ${account_locator.btn_order}
-
-Input Username Text Box
+Input Registration Email Address Text Box
     [Arguments]    ${gmail}
+    SeleniumLibrary.Wait Until Element Is Visible    ${account_locator.username}
     SeleniumLibrary.Input Text          ${account_locator.username}           ${gmail}
 
-Input Password Text Box
+Input Registration Password Text Box
     [Arguments]    ${password}
+    SeleniumLibrary.Wait Until Element Is Visible    ${account_locator.password}
     SeleniumLibrary.Input Text          ${account_locator.password}           ${password}
 
-Input Confirm Password Text Box
-    [Arguments]    ${confirmPassword}
-    SeleniumLibrary.Input Text          ${account_locator.confirmPassword}    ${confirmPassword}
+Input Registration Confirm Password Text Box
+    [Arguments]    ${confirm_password}
+    SeleniumLibrary.Wait Until Element Is Visible    ${account_locator.confirmPassword}
+    SeleniumLibrary.Input Text          ${account_locator.confirm_password}    ${confirm_password}
 
 Click OK Button
-    common.Click Button    OK
+    SeleniumLibrary.Wait Until Element Is Visible    ${account_locator.OK_button}   
+    SeleniumLibrary.Click Element       ${account_locator.OK_button}
 
-Click PAY Button
-    common.Click Button    PAY       
-
-Click Next Button
-    common.Click Button    Next
+The Order Should Be Createds
+    SeleniumLibrary.Wait Until Element Is Visible    ${account_locator.btn_order}
+    SeleniumLibrary.Click Element       ${account_locator.btn_order}      

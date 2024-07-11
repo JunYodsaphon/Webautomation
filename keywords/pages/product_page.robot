@@ -2,32 +2,35 @@
 Resource    ../imports.robot
 
 *** Keywords ***
-Search product "phone” in search box
-    SeleniumLibrary.Input Text          ${product_locator.search_box}     ${TC01.product_name}
-
-Click search icon
-    SeleniumLibrary.Click Element       ${product_locator.search_icon}
-
-Add phone to cart
-    SeleniumLibrary.Click Element       ${product_locator.add_phone}
 
 Click Add to cart button
-    common.Click Button    Add to cart
-    
-Purchase the product with credit card 4111 1111 1111 1111
-    SeleniumLibrary.Input Text          ${product_locator.basic_bin}        ${payment_details.card_number}
+    SeleniumLibrary.Wait Until Element Is Visible    ${product_locator.Add_to_cart_button}
+    SeleniumLibrary.Click Element    ${product_locator.Add_to_cart_button}
+
+Click OK Button
+    SeleniumLibrary.Wait Until Element Is Visible    ${product_locator.OK_button}
+    SeleniumLibrary.Click Element       ${product_locator.OK_button}
+
+Purchase The Product With Credit Card 4111 1111 1111 1111
+    [Arguments]    ${payment_details.card_number}
+    SeleniumLibrary.Wait Until Element Is Visible    ${product_locator.card_number}
+    SeleniumLibrary.Input Text          ${product_locator.card_number}        ${payment_details.card_number}
                                     
-Input exp text box
+Input Exp Text Box
+    [Arguments]    ${payment_details.expiration_date}
+    SeleniumLibrary.Wait Until Element Is Visible    ${product_locator.basic_exp}
     SeleniumLibrary.Input Text          ${product_locator.basic_exp}        ${payment_details.expiration_date}
 
-Input cvc text box
+Input Cvc Text Box
+    [Arguments]    ${payment_details.cvc_code}
+    SeleniumLibrary.Wait Until Element Is Visible    ${product_locator.basic_cvc} 
     SeleniumLibrary.Input Text          ${product_locator.basic_cvc}         ${payment_details.cv_code}
 
-Input card owner text box
+Input Card Owner Text Box
+    [Arguments]    ${payment_details.card_owner}
+    SeleniumLibrary.Wait Until Element Is Visible    ${product_locator.basic_owner}
     SeleniumLibrary.Input Text          ${product_locator.basic_owner}        ${payment_details.card_owner}
 
 Click Confirm Payment button
-    common.Click Button    Confirm Payment
-
-Click OK button
-    common.Click Button    OK
+    SeleniumLibrary.Wait Until Element Is Visible    ${product_locator.Confirm_payment_button}
+    SeleniumLibrary.Click Element       ${product_locator.Confirm_payment_button}

@@ -2,18 +2,18 @@ product_web:
   product_name: phone
 
 user_account:
-  gmail:  Jun0099@gmail.com
+  gmail:  Jun0110@gmail.com
   password: Jin@2345678
   confirm_password: Jin@2345678
 
 delivery_info:
-  name: yodsaphon
+  ture_name: yodsaphon
   surname: keddid
   address: 44/44 Village No. 4, Fa Ham Subdistrict, Mae Hong Son District, Samut Sakhon Province
   phone_number: 0843488574
 
 payment_details:
   card_number:  "4111111111111111"
-  expiration_date:  12/2028
+  exp_date:  12/2028
   cv_code:  "343"
-  card_owner: abcdefghijklmnopqrstu
+  owner_card: abcdefghijklmnopqrstu
