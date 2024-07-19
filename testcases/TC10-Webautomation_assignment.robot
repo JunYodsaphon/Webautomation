@@ -13,5 +13,4 @@ TC01-Test Doppee platfrom
     info_feature.Fill Delivery info field    ${delivery_info.ture_name}    ${delivery_info.surname}    ${delivery_info.address}    ${delivery_info.phone_number}
     product_page.Purchase The Product With Credit Card    ${payment_details.card_number}
     product_feature.Exp and cvc can be any    ${payment_details.exp_date}    ${payment_details.cv_code}    ${payment_details.owner_card}
-    home_page.Click Icon Account
     account_page.The Order Should Be Createds
