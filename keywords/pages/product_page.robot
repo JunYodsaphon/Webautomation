@@ -46,4 +46,5 @@ Verify Confirm Payment button
     SeleniumLibrary.Wait Until Element Is Visible    ${product_locator.Confirm_payment_button}
 
 Click Confirm Payment button
+    SeleniumLibrary.Wait Until Element Is Visible    ${product_locator.Confirm_payment_button}
     SeleniumLibrary.Click Element       ${product_locator.Confirm_payment_button}
