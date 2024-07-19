@@ -41,3 +41,8 @@ Verify Order
 
 The Order Should Be Createds
     SeleniumLibrary.Click Element       ${account_locator.btn_order}
+
+Click Sign Up Button name
+    [Arguments]    ${timeout}=10s    
+    SeleniumLibrary.Wait Until Element Is Visible    ${account_locator.sign_up_button}    ${timeout}=10s    
+    SeleniumLibrary.Click Element       ${account_locator.sign_up_button}    ${timeout}=10s
